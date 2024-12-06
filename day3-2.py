@@ -1,12 +1,8 @@
 import re
 
 
-def solve(input):
-    file = open(input)
-    content = file.read()
-    file.close()
-
-    muls = re.findall(r"mul\(\d{0,3},\d{0,3}\)|do\(\)|don't\(\)", content, re.MULTILINE)
+def solve(input: str):
+    muls = re.findall(r"mul\(\d{0,3},\d{0,3}\)|do\(\)|don't\(\)", input, re.MULTILINE)
 
     total = 0
     enabled = True

@@ -19,9 +19,17 @@ assert part == 1 or part == 2
 
 daymod = importlib.import_module(f"day{day}-{part}")
 
-example = daymod.solve(f"./examples/day{day}-{part}_input.txt")
+examplefile = open(f"./examples/day{day}-{part}_input.txt")
+example_input = examplefile.read()
+examplefile.close()
+
+example = daymod.solve(example_input)
 answer = get_example(day, part)
 assert example == answer
 
-result = daymod.solve(f"./input/day{day}.txt")
+puzzlefile = open(f"./input/day{day}.txt")
+puzzle_input = puzzlefile.read()
+puzzlefile.close()
+
+result = daymod.solve(puzzle_input)
 print(f"\nresult: {result}")

@@ -1,12 +1,13 @@
-def solve(input):
-    file = open(input)
-    content = file.readlines()
+def solve(input: str):
+    content = input.split("\n")
     assert len(content) > 0
-    file.close()
 
     count = 0
 
     for report in content:
+        if report == "":
+            break
+
         safe = True
         s = 0
 
