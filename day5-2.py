@@ -3,6 +3,7 @@ import math
 
 def solve(input: str):
     content = input.split("\n")
+    assert len(content) > 0
 
     rules = {}
     updates = []
@@ -22,6 +23,7 @@ def solve(input: str):
         elif chunk == 1:
             updates.append(line.split(","))
 
+    assert len(updates) > 0
     sum = 0
 
     for u in updates:
