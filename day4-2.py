@@ -1,8 +1,8 @@
 def solve(input: str):
-    content = input.split("\n")
+    content = input.split("\n")[:-1]
     assert len(content) > 0
 
-    data = [list(x) for x in content if x != ""]
+    data = [list(x) for x in content]
 
     count = 0
 

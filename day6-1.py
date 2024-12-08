@@ -1,8 +1,8 @@
 def solve(input: str):
-    content = input.split("\n")
+    content = input.split("\n")[:-1]
     assert len(content) > 0
 
-    grid = [list(x) for x in content if x != ""]
+    grid = [list(x) for x in content]
 
     guard = guard_find(grid)
     assert guard is not None

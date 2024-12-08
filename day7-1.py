@@ -1,12 +1,10 @@
 def solve(input: str):
-    content = input.split("\n")
+    content = input.split("\n")[:-1]
+    assert len(content) > 0
 
     sum = 0
 
     for test in content:
-        if test == "":
-            continue
-
         d = test.split(":")
         assert len(d) == 2
 

@@ -1,14 +1,11 @@
 def solve(input: str):
-    content = input.split("\n")
+    content = input.split("\n")[:-1]
     assert len(content) > 0
 
     list1 = []
     list2 = []
 
     for line in content:
-        if line == "":
-            break
-
         nums = line.split()
         assert len(nums) == 2
         list1.append(int(nums[0]))

@@ -2,7 +2,7 @@ import math
 
 
 def solve(input: str):
-    content = input.split("\n")
+    content = input.split("\n")[:-1]
     assert len(content) > 0
 
     rules = {}

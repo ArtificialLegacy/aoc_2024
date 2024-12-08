@@ -2,12 +2,12 @@ import copy
 
 
 def solve(input: str):
-    content = input.split("\n")
+    content = input.split("\n")[:-1]
     assert len(content) > 0
 
     values = {"#": 0, ".": 1, "^": 2, ">": 3, "V": 5, "<": 7}
 
-    grid = [[values[c] for c in list(x)] for x in content if x != ""]
+    grid = [[values[c] for c in list(x)] for x in content]
 
     guard = guard_find(grid)
     assert guard is not None

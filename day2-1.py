@@ -1,13 +1,10 @@
 def solve(input: str):
-    content = input.split("\n")
+    content = input.split("\n")[:-1]
     assert len(content) > 0
 
     count = 0
 
     for report in content:
-        if report == "":
-            break
-
         safe = True
         s = 0
 
