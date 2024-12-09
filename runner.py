@@ -1,5 +1,6 @@
 import sys
 import importlib
+import time
 
 
 def get_example(day, part):
@@ -31,5 +32,8 @@ puzzlefile = open(f"./input/day{day}.txt")
 puzzle_input = puzzlefile.read()
 puzzlefile.close()
 
+start = time.time()
 result = daymod.solve(puzzle_input)
+end = time.time()
 print(f"\nresult: {result}")
+print("in: %s" % (end - start))
